@@ -1,4 +1,0 @@
-<? php
-
-	readfile('index.html');
-?>
