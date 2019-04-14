@@ -5,6 +5,7 @@
 	<head>
 		<title>Project 4: Youtube Trends</title>
 		<link href="css/style-youtube.css" rel="stylesheet"/>
+		<script src="jquery-3.3.1.min.js"></script>
 	</head>
 
 	<body>
@@ -17,41 +18,139 @@
 			<div id="main-group"> <u>Group Members:</u> Britney Chen, Logan Evans, and David Freedman<br><br></div>
 			<div id="main-image-1"><img src="images/final-data.jpg"/></div>
 			<div id="main-image-caption"> The final product of our data visualization. <br><br></div>
+
+			<div id="main-text-title">Introduction</div>
 			<div id="main-text"> For this project, we were instructed to gather data about interactions that took place on the internet. We then had to visualize this data in a way that could be drawn by an AxiDraw machine. We ultimately chose to focus on the data of different categories of videos that were on the trending page on Youtube. <br><br></div>
 
 			<div id="main-text"> We originally had the idea to visualize how humans have interacted with turtle migrations, but that yielded little information on the internet on how we have changed the migrations, or if we have changed their migration patterns. More specifically, We wanted to target how we as humans had affected the turtles through global warming but with global warming being a gradual process, finding both interesting and informative data proved to be difficult. We then found information that was more readily available to us: YouTube trending videos along with their categories.  <br><br></div>
 
-			<div id="main-text">Online, we found a spreadsheet with many months worth of data regarding trending videos during 2017. We selected a time range of November 14 - 30th 2017. This time slot yielded 3,400
-			videos of 14 different categories. We intially came up with two designs that represented this data visually.<br><br></div>
+			<div id="main-text-title">Data Collection</div>
+			<div id="main-text"> Via a website in which users could submit datasets called Kraggle, a dataset of all the trending videos from Youtube from November 2017 to June 2018. This dataset has various spreadsheet for different countries and their corresponding trending videos. we used the US specific spreadsheet which can be downloaded from <a href="https://www.kaggle.com/datasnaek/youtube-new#USvideos.csv">here</a>. This particular spreadsheet is almost 41,000 cells long, each cell containing the following for each video:
+			<ul>
+			<li>a video id</li> 
+			<li> the date it was trending</li> 
+			<li>the title of the video</li>
+			<li>the channel title</li> 
+			<li>an id for the category of the video</li> 
+			<li>the time it was published</li> 
+			<li>tags for the video</li>
+			<li>the number of views, likes, dislikes, and comments (each in its own column)</li>  
+			<li>the link to the video</li>
+			<li>whether comments or ratings were disabled for the video</li>  
+			<li>whether there is an error viewing the video or the video has been removed</li> 
+			<li>the description for the video</li> 
+			</ul> 
+
+			In order to make the data more managable, we chose the date range of when the data started to the end of the month in which it started. This time range is November 14 - 30, 2017. We then focused on the category of each video in this range. The category for each cell was marked by a category id that corresponded to a type of category. For instance, the category id "1" corresponded to the category "Film and Animation". The creator of the dataset also had a file with all of the category ids along with the category title it represented so we could decifer what each id meant.<br><br></div>
+
+			<div id="main-text-title">Designing the Data Visualization</div>
+			<div id="main-text"> There were 3,400 videos in our chosen date range and 14 different categories for these videos. Our next step was to figure out how to properly visualize the data in a creative but easy to understand manner. We came up with two different designs for our data.<br><br></div>
 
 			<div id="main-image-2"><img src="images/design-2.png"/></div>
 			<div id="main-image-caption"> One of our initial designs. <br><br></div>
 
-			<div id="main-text">This is one of our initial visualization designs for our data. We wanted it to be colorful and simple, while still being portraying each trend. We also decided to have each arc / line be worth 10 views, amounting to the total number of views each trending category had. We wanted the art to have motion in it, which is why we chose to do arcs spiraling around a center point. We started with the largest amount of views in a trend and worked down to the trend with the smallest amount of views.<br><br></div>
+			<div id="main-text">This is one of our initial visualization designs for our data. We wanted it to be colorful and simple, while still being portraying each trend. We also decided to have each arc / line be worth 10 videos, amounting to the total number of videos each trending category had. We wanted the art to have motion in it, which is why we chose to do arcs spiraling around a center point. We started with the largest amount of videos in a trend category and worked down to the category with the smallest amount of videos.<br><br></div>
 
 			<div id="main-image-1"><img src="images/design-1.PNG"/></div>
-			<div id="main-image-caption"> Another design for visualizing our data. <br><br></div>
+			<div id="main-image-caption"> The second design for visualizing our data. <br><br></div>
 
 			<div id="main-text">This was our second design, which we decided to use for this project. We wanted a way to represent not only the quantity of trending videos in each category, but also the relative proportions between them. Therefore, we came up with the idea to draw the data in rings around a center, each ring representing 10 videos in that category. Every ring is assigned a different height depending on the frequency of that video category, and so the end display is able to demonstrate the relative frequencies.<br><br></div>
 
-			<div class="smaller-images">
-				<div id="main-image-3"> <img src="images/data-1.jpg"/></div>
-				<div id="main-image-3"> <img src="images/data-2.jpg"/></div>
-				<div id="main-image-3"> <img src="images/data-3.jpg"/></div>
-				<div id="main-image-3"> <img src="images/data-4.jpg"/></div>
-				<div id="main-image-3"> <img src="images/data-5.jpg"/></div>
+			<div id="main-text">We chose this second design because it was simpler than the first design (we were worried the drawing would take too long) and fully completed in time for the drawing machine. We do think that the first design would be very interesting to see drawn by the machine and would be interested in doing that in the future.<br><br></div>
+
+			<div id="main-text-title">Drawing Our Design Using an AxiDraw machine</div>
+			<br>
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+			  <!-- Full-width images with number and caption text -->
+			  <div class="mySlides fade">
+			    <div class="numbertext">1 / 5</div>
+			    <img src="images/data-1.jpg" style="width:500px; height:350px">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">2 / 5</div>
+			    <img src="images/data-2.jpg" style="width:500px; height:350px">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">3 / 5</div>
+			    <img src="images/data-3.jpg" style="width:500px; height:350px">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">4 / 5</div>
+			    <img src="images/data-4.jpg" style="width:500px; height:350px">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">5 / 5</div>
+			    <img src="images/data-5.jpg" style="width:500px; height:350px">
+			  </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+			  <span class="dot" onclick="currentSlide(4)"></span> 
+			  <span class="dot" onclick="currentSlide(5)"></span> 
+			</div>
+
+			<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1} 
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				      slides[i].style.display = "none"; 
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				      dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block"; 
+				  dots[slideIndex-1].className += " active";
+				}
+
+			</script>
 
 			<div id="main-image-caption">Images of the AxiDraw producing our data visualization. <br><br></div>
 
-			<div id="main-text">To produce the visualization using the AxiDraw, we had to convert the Illustrator file to an SVG file that contained the different color circle groups as different layers. We needed each color to be a different layer so that we could draw each portion individually, switching the pen colors between each layer. We used 8 different pen colors as that is what we had available to us. The file took a while to correctly format but once all the layers had been properly set and the dimensions were adjusted, we were able to start drawing. The process took about 2 hours including setup but resulted in our data visualization coming to life<br><br></div>
+			<div id="main-text">To produce the visualization using the AxiDraw, we had to convert the Illustrator file to an SVG file that contained the different color circle groups as different layers. We needed each color to be a different layer so that we could draw each portion individually, switching the pen colors between each layer. We used 8 different pen colors as that is what we had available to us. In the future, we would like to see our drawing with its originally chosen colors however with our lack of supplies, that was not possible for this stage. The file took a while to correctly format but once all the layers had been properly set and the dimensions were adjusted, we were able to start drawing. The process took about 2 hours including setup but resulted in our data visualization coming to life<br><br></div>
 
 
 			<div id="final">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ia32EMG9N8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<div id="main-image-4"><img src="images/final-data.jpg"/></div>
 			</div>
+			<div id="main-image-caption"> A video of the AxiDraw drawing our design and the final product. </div>
 
+			<div id="main-text-title">Final Reflection</div>
+			<div id="main-text">Though we are pretty happy with our final product, there are a few things we would have done differently. We would be interested to see more data in our visualization along with using a date range in 2019 in order to see more up-to-date data. We also wish we had the proper pen colors when it was time to draw our design as it would have been nice to see the exact design created. We also would like to see the other design we made drawn by the machine as we think the end product would be quite interesting.<br><br></div>
 		</div>
 	</body>
 </html>
+
+
